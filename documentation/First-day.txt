@@ -1,0 +1,8 @@
+I had a little trouble with github since i'm using SSH built into CMD for this project rather than my old WSL instance.
+
+I create a new SSH key with ssh-keygen and added it to my github profile.
+I also had to include my new repo in my github PAT for it to authenticate correctly.
+
+Not too much else to talk about since all I did was create the repo and structure.
+
+Hopefully tomorrow we will have a working user creation script and the problems I faced getting it working in this documentation folder.
