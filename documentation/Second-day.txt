@@ -1,0 +1,11 @@
+Today I learned about the basics of bash scripting, like the use of variables which is slightly different to the Powershell i'm used to.
+
+The script I created today will ask you to give the name of the user you wish to create, create the user and their home directory with useradd $username -m.
+
+After it creates the user, the script will ask you to create a temporary password for the user to login with, the user will then be forced to create their own password on logging in for the first time.
+
+Learning how to do this with scripting is nice as i'm learning about different options on the commands, such as read -s making the typing for the prompt invisible to protect the password, and i've not used much linux before in the context of creating users, so I didn't know about passwd -e until doing this aswell.
+
+I'm happy the script works, but in the future I will aim to add logging as soon as I figure out how to do that aswell.
+
+The plan for tomorrow is to create a script that will create groups and also assign users to existing groups.
