@@ -1,0 +1,9 @@
+This script needs to be run as sudo.
+
+Today I made a script that will first ask you if you want to create a group, if you enter "y", you can name a group and it will create it.
+
+If you select "n" or after you've created a group, it will then ask you to enter a users name and then enter the group you wish to put it in to.
+
+What I learned today was mostly if functions in bash, that was basically my challenge today, learning the correct way to use the if function and how it's formatted.
+
+I still need to add logging in to my scripts, but as the weekend is now starting, I can learn how to do that and add it into my scripts retroactively and then keep adding them into my future scripts, i'm getting shocked how easy it actually is to write these scripts, but i'm sure once I come across a more complex function I will start struggling again haha.
