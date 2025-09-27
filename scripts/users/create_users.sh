@@ -1,4 +1,5 @@
 #!/bin/bash
+exec > >(tee -a "/var/log/$(basename "$0" .sh).log") 2>&1
 
 echo "This is a script to create users, please follow the prompts to create a user."
 

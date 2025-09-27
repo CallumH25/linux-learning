@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+exec > >(tee -a "/var/log/$(basename "$0" .sh).log") 2>&1
 
 echo "This script can add groups or add users to groups, follow along with the prompts."
 

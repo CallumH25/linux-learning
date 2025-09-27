@@ -1,0 +1,11 @@
+So today I created the permissions script, it's pretty simple, I wasn't sure how else to script permissions.
+
+Firstly, the script will ask for a group name you wish to give permissions to
+
+Secondly, it will ask for the file path you want that group to have access to.
+
+After that, it gives the group ownership to that folder and gives 775 permissions for it.
+
+I had a bit of trouble with testing as I thought it didn't work at first but I needed to do "newgrp $grp" to refresh my groups and make sure the permissions worked properly.
+
+I also added some basic logging to my scripts with a one liner at the top that I googled for, it needs some improving and I definitely need to learn how to log better as there aren't any timestamps for it yet, I will improve that tomorrow but atleast there is logging on the scripts now.
