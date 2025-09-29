@@ -1,9 +1,25 @@
 #!/bin/bash
 exec > >(tee -a "/var/log/$(basename "$0" .sh).log") 2>&1
 
-echo "This script can add groups or add users to groups, follow along with the prompts."
+echo "This script adds the default groups, and allows you to create groups yourself."
 
-echo "Do you want to create a group? (y/n)"
+groupadd developers
+groupadd admins
+groupadd fakecompany
+
+mkdir -p /shared/developers
+mkdir -p /shared/admins
+mkdir -p /shared/fakecompany
+
+chgrp developers /shared/developers
+chgrp admins /shared/admins
+chgrp fakecompany /shared/fakecompany
+
+chmod -R 770 /shared/developers
+chmod -R 770 /shared/admins
+chmod -R 770 /shared/fakecompany 
+
+echo "Do you want to create a group yourself? (y/n)"
 
 read decision
 

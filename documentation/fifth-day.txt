@@ -1,0 +1,2 @@
+I didn't do too much today, just added some stuff to the user and group scripts. My logging was quite useless when I checked them today after having an issue with one of my scripts so I will change the logging tomorrow and also add in some error handling for the scripts so I know it went wrong when using the script.
+
