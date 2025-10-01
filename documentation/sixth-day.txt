@@ -1,0 +1,4 @@
+Today I added proper logging on all scripts with time stamps etc to make troubleshooting easier.
+
+I also added an if statement to the setup_groups.sh script to stop the error message about a directory already existing, it will skip over making the groups and directories if the directory already exists.
+

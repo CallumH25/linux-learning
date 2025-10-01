@@ -1,5 +1,8 @@
 #!/bin/bash
-exec > >(tee -a "/var/log/$(basename "$0" .sh).log") 2>&1
+LOG_FILE="/var/log/setup_permissions.log"
+
+exec > >(while read line; do echo "[$(date '+%Y-%m-%d %H:%M:%S')] $line"; done | tee -a "$LOG_FILE")
+exec 2>&1
 
 echo "please input the group you want to own files"
 

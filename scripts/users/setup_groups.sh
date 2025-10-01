@@ -1,7 +1,12 @@
 #!/bin/bash
-exec > >(tee -a "/var/log/$(basename "$0" .sh).log") 2>&1
+LOG_FILE="/var/log/setup_groups.log"
 
 echo "This script adds the default groups, and allows you to create groups yourself."
+exec > >(while read line; do echo "[$(date '+%Y-%m-%d %H:%M:%S')] $line"; done | tee -a "$LOG_FILE")
+exec 2>&1
+
+if [ ! -d /shared/developers ];
+then
 
 groupadd developers
 groupadd admins
@@ -11,6 +16,7 @@ mkdir -p /shared/developers
 mkdir -p /shared/admins
 mkdir -p /shared/fakecompany
 
+fi
 chgrp developers /shared/developers
 chgrp admins /shared/admins
 chgrp fakecompany /shared/fakecompany

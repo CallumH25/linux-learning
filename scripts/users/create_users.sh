@@ -1,4 +1,9 @@
 #!/bin/bash
+LOG_FILE="/var/log/create_users.log"
+
+exec > >(while read line; do echo "[$(date '+%Y-%m-%d %H:%M:%S')] $line"; done | tee -a "$LOG_FILE")
+exec 2>&1
+
 echo "This is a script to create users, please follow the prompts to create a user."
 echo "Please enter the username of the user you wish to create."
 read username
